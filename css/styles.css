@@ -12,6 +12,16 @@ body {
     box-sizing: border-box;
 }
 
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .navbar {
     background-color: #7477bf;
     width: 100%;
@@ -131,6 +141,7 @@ sup {
     border-right: 1px solid #ccc;
     font-weight: 700;
     position: relative;
+    color: #323232;
 }
 
 .tab:after {
@@ -143,10 +154,86 @@ sup {
     left: 0;
 }
 
-.chart-container {
+.lineChart-chart-container {
     width: 100%;
+    width:85vw;
+    position: relative;  
+    margin: 0 auto;
 }
 
+#alert-bar {
+    color: #fff;;
+    background-color: #7477bf;
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+}
+
+.alert-text {
+    flex-grow: 1;
+}
+
+#exit-icon {
+    width: 15px;
+    fill: #fff;
+}
+
+#exit-icon:hover {
+    fill: #4d4c72;
+    cursor: pointer;
+}
+
+#alert-bar.hidden {
+    display: none;
+}
+
+.chart-wrapper {
+    margin: 20px auto 0;
+    width: 92%;
+}
+
+.chart-header {
+    flex-grow: 1;
+    font-weight: 700;
+    color: #323232;
+    margin-bottom: 10px;
+}
+
+.chart-tabs {
+    margin-bottom: 15px;
+}
+
+.chart-tabs a {
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #323232;
+}
+
+
+.chart-tabs a.active {
+    background-color: #81c98f;
+    padding: 5px 12px;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.split-section {
+    display: block;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    margin-bottom: 40px;
+}
+
+.split-section .half {
+    width: 50%;
+    float: left;
+    margin-top: 20px;
+}
 
 
 @media only screen and (min-width: 333px) {
@@ -181,6 +268,9 @@ sup {
         margin-left: 20px;
     }
 
+    .chart-wrapper {
+        display: flex;
+    }
 }
 
 @media only screen and (min-width: 768px) {
