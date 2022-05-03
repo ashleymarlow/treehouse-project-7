@@ -191,7 +191,7 @@ sup {
     display: none;
 }
 
-.chart-wrapper {
+.chart-header-wrapper {
     margin: 20px auto 0;
     width: 92%;
 }
@@ -232,9 +232,58 @@ sup {
 .split-section .half {
     width: 50%;
     float: left;
-    margin-top: 20px;
+    padding-top: 20px;
 }
 
+.half:first-of-type {
+    border-right: 1px solid #ccc;
+}
+
+.bar-chart-container {
+    margin: 20px auto 0;
+    width: 92%;
+}
+
+.pie-chart-container {
+    width: 100%;
+    width: 25vw;
+    position: relative;  
+    margin: 0 auto;
+}
+
+.social-section {
+    border-top: 1px solid #ccc;
+}
+
+.card-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-wrapper .svg-wrapper {
+    width: 100px;
+    height: 100px;
+    background-color: #7477bf;
+    border-radius: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.card-wrapper .svg-wrapper svg {
+    fill: #fff;
+    width: 45px;
+}
+
+.facebook-card, .instagram-card, .twitter-card {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    flex: 0 0 30%;
+    padding: 20px;
+}
 
 @media only screen and (min-width: 333px) {
     .logo {
@@ -268,7 +317,7 @@ sup {
         margin-left: 20px;
     }
 
-    .chart-wrapper {
+    .chart-header-wrapper {
         display: flex;
     }
 }

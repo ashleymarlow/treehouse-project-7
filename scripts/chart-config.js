@@ -32,7 +32,7 @@ const lineChartConfig = {
           display: false
                 },
             }
-        }
+  }
 };
 
 const lineChart = new Chart(
@@ -45,27 +45,11 @@ const barChartLabels = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 const barChartData = {
   labels: barChartLabels,
   datasets: [{
-    label: 'My First Dataset',
-    data: [65, 59, 80, 81, 56, 55, 40],
+    label: 'Daily Traffic',
+    data: [75, 110, 175, 125, 225, 200, 100],
     backgroundColor: [
-      'rgba(255, 99, 132, 0.2)',
-      'rgba(255, 159, 64, 0.2)',
-      'rgba(255, 205, 86, 0.2)',
-      'rgba(75, 192, 192, 0.2)',
-      'rgba(54, 162, 235, 0.2)',
-      'rgba(153, 102, 255, 0.2)',
-      'rgba(201, 203, 207, 0.2)'
-    ],
-    borderColor: [
-      'rgb(255, 99, 132)',
-      'rgb(255, 159, 64)',
-      'rgb(255, 205, 86)',
-      'rgb(75, 192, 192)',
-      'rgb(54, 162, 235)',
-      'rgb(153, 102, 255)',
-      'rgb(201, 203, 207)'
-    ],
-    borderWidth: 1
+      'rgba(116, 119, 191, 1)'
+    ]
   }]
 };
 
@@ -77,6 +61,11 @@ const barChartConfig = {
       y: {
         beginAtZero: true
       }
+    },
+    plugins:{   
+      legend: {
+        display: false
+      },
     }
   },
 };
@@ -90,17 +79,17 @@ const barChart = new Chart(
 // PIE CHART JAVASCRIPT 
 const pieChartData = {
   labels: [
-    'Red',
-    'Blue',
-    'Yellow'
+    'Desktop',
+    'Tablet',
+    'Phones'
   ],
   datasets: [{
-    label: 'My First Dataset',
+    label: 'Mobile Users',
     data: [300, 50, 100],
     backgroundColor: [
-      'rgb(255, 99, 132)',
-      'rgb(54, 162, 235)',
-      'rgb(255, 205, 86)'
+      'rgba(116, 119, 191, 1)',
+      'rgba(129, 201, 143, 1)',
+      'rgba(81, 182, 200, 1)'
     ],
     hoverOffset: 4
   }]
@@ -109,6 +98,13 @@ const pieChartData = {
 const pieChartConfig = {
   type: 'doughnut',
   data: pieChartData,
+  options: {
+    plugins:{   
+      legend: {
+        position: 'right'
+      },
+    }
+  }
 };
 
 const pieChart = new Chart(
