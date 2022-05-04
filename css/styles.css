@@ -8,6 +8,13 @@ body {
             "main";
 }
 
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #7477bf;
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -226,17 +233,15 @@ sup {
     display: block;
     margin-top: 20px;
     border-top: 1px solid #ccc;
-    margin-bottom: 40px;
 }
 
 .split-section .half {
     width: 50%;
     float: left;
-    padding-top: 20px;
 }
 
-.half:first-of-type {
-    border-right: 1px solid #ccc;
+.split-section .half:nth-of-type(2) {
+    border-left: 1px solid #ccc;
 }
 
 .bar-chart-container {
@@ -261,6 +266,11 @@ sup {
     justify-content: center;
 }
 
+.card-wrapper span {
+    font-size: 40px;
+    color: #777777;
+}
+
 .card-wrapper .svg-wrapper {
     width: 100px;
     height: 100px;
@@ -277,12 +287,21 @@ sup {
     width: 45px;
 }
 
-.facebook-card, .instagram-card, .twitter-card {
+.card-wrapper .card {
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 20px;
     flex: 0 0 30%;
     padding: 20px;
+    display: flex;
+}
+
+.card-wrapper .card h3 {
+    margin: 0;
+}
+
+.card-wrapper .card .content-wrapper {
+    margin: 14px 0 0 20px;
 }
 
 @media only screen and (min-width: 333px) {
