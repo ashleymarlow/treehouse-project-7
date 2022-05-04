@@ -198,16 +198,20 @@ sup {
     display: none;
 }
 
-.chart-header-wrapper {
+.header-wrapper {
     margin: 20px auto 0;
     width: 92%;
 }
 
-.chart-header {
-    flex-grow: 1;
+.header {
     font-weight: 700;
     color: #323232;
     margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.chart-header-wrapper .header {
+    flex-grow: 1;
 }
 
 .chart-tabs {
@@ -230,14 +234,13 @@ sup {
 }
 
 .split-section {
-    display: block;
+    display: flex;
     margin-top: 20px;
     border-top: 1px solid #ccc;
 }
 
 .split-section .half {
-    width: 50%;
-    float: left;
+    flex: 0 0 50%;
 }
 
 .split-section .half:nth-of-type(2) {
@@ -303,6 +306,42 @@ sup {
 .card-wrapper .card .content-wrapper {
     margin: 14px 0 0 20px;
 }
+
+
+.member-card {
+    display: flex;
+    margin: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.member-card .member {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.member-card .member-name {
+    font-weight: 700;
+    margin: 0px;
+}
+
+.member-card .member-content {
+    margin-left: 10px;
+    margin-top: 17px;
+    width: 100%;
+    position: relative;
+}
+
+.member-card .member-content a { 
+    text-decoration: none;
+    color: #9092cb;
+}
+
+.member-card .member-content .date {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+ }
 
 @media only screen and (min-width: 333px) {
     .logo {
