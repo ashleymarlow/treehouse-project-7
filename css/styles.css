@@ -8,25 +8,14 @@ body {
             "main";
 }
 
-h3 {
-    font-size: 20px;
-    font-weight: 400;
-    color: #7477bf;
-}
-
-
 * {
     box-sizing: border-box;
 }
 
-.clearfix {
-    overflow: auto;
-}
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #7477bf;
 }
 
 .navbar {
@@ -164,10 +153,9 @@ sup {
 
 .lineChart-chart-container {
     width: 100%;
-    width:85vw;
+    width: 85vw;
     position: relative;  
     margin: 0 auto 20px;
-
 }
 
 #alert-bar {
@@ -242,10 +230,6 @@ sup {
 
 .split-section .half {
     flex: 0 0 50%;
-}
-
-.split-section .half:nth-of-type(2) {
-    border-left: 1px solid #ccc;
 }
 
 .bar-chart-container {
@@ -348,26 +332,26 @@ sup {
     display: block;
 }
 
- .member-card .member-content .right-side.arrow {
+.member-card .member-content .right-side.arrow {
     display: none;
- }
+}
 
 
- .member-card .member-time {
-     margin-top: 3px;
-     margin-bottom: 0px;
- }
+.member-card .member-time {
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
 
- .purple {
-     color: #9092cb;
- }
+.purple {
+    color: #9092cb;
+}
 
- .form-wrapper {
+.form-wrapper {
     margin: 20px auto 0;
     width: 92%;
- }
+}
 
- input {
+input {
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -375,11 +359,11 @@ sup {
     width: 100%;
     font-size: 16px;
     margin-bottom: 15px;
- }
+}
 
 ::placeholder {
-     color: #999999;
- }
+    color: #999999;
+}
 
 textarea {
     background-color: #f0f0f0;
@@ -409,10 +393,9 @@ button {
 }
 
 button:hover {
-     background-color: #4d4c72;
+    background-color: #4d4c72;
 }
 
- /* TOGGLE SECTION */
 input[type=checkbox]{
     height: 0;
     width: 0;
@@ -507,13 +490,6 @@ input[type=checkbox]:checked + label:after {
     border-bottom: 1px solid #ccc;
     padding-bottom: 15px;
 }
-
-/* @media only screen and (min-width: 333px) {
-    .logo {
-        flex-grow: 1;
-    }
-
-} */
 
 @media only screen and (min-width: 430px) {
     .navbar {
@@ -643,6 +619,9 @@ input[type=checkbox]:checked + label:after {
         display: block;
      }
 
+     .split-section .half:nth-of-type(2) {
+        border-left: 1px solid #ccc;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
