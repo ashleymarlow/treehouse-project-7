@@ -52,6 +52,7 @@ h3 {
     font-size: 19px;
     margin-top: 10px;
     margin-right: 10px;
+    flex-grow: 1;
 }
 
 .bell-path {
@@ -235,7 +236,7 @@ sup {
 }
 
 .split-section {
-    display: flex;
+    display: block;
     border-top: 1px solid #ccc;
 }
 
@@ -254,7 +255,7 @@ sup {
 
 .pie-chart-container {
     width: 100%;
-    width: 25vw;
+    width: 75vw;
     position: relative;  
     margin: 0 auto;
 }
@@ -264,7 +265,7 @@ sup {
 }
 
 .card-wrapper {
-    display: flex;
+    display: block;
     gap: 20px;
     justify-content: center;
     margin-bottom: 20px;
@@ -276,8 +277,8 @@ sup {
 }
 
 .card-wrapper .svg-wrapper {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     background-color: #7477bf;
     border-radius: 100%;
     text-align: center;
@@ -298,6 +299,7 @@ sup {
     flex: 0 0 30%;
     padding: 20px;
     display: flex;
+    margin-bottom: 15px;
 }
 
 .card-wrapper .card h3 {
@@ -310,11 +312,12 @@ sup {
 
 
 .member-card {
-    display: flex;
-    margin: 20px;
+    display: block;
+    margin: 20px 15px;
     padding: 20px 0;
     border-bottom: 1px solid #ccc;
     align-items: center;
+    text-align: center;
 }
 
 .member-card:last-of-type {
@@ -327,13 +330,11 @@ sup {
 }
 
 .member-card .member-first-line {
-    font-weight: 700;
     margin: 0px;
     padding-right: 10px;
 }
 
 .member-card .member-content {
-    margin-left: 10px;
     width: 100%;
     position: relative;
 }
@@ -344,10 +345,13 @@ sup {
 }
 
 .member-card .member-content .right-side {
-    position: absolute;
-    right: 0px;
-    top: 0px;
+    display: block;
+}
+
+ .member-card .member-content .right-side.arrow {
+    display: none;
  }
+
 
  .member-card .member-time {
      margin-top: 3px;
@@ -399,7 +403,7 @@ button {
     font-weight: 200;
     width: 100%;
     border-radius: 5px;
-    border: none;
+    border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 20px;
 }
@@ -486,11 +490,30 @@ input[type=checkbox]:checked + label:after {
     background-color: #777777;
 }
 
-@media only screen and (min-width: 333px) {
+.member-split-section .half:first-of-type {
+    border-bottom: 1px solid #ccc;
+}
+
+.message-split-section .half:first-of-type {
+    border-bottom: 1px solid #ccc;
+}
+
+.card-wrapper {
+    margin: 20px auto 0;
+    width: 92%;
+}
+
+.chart-split-section .half:first-of-type {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+}
+
+/* @media only screen and (min-width: 333px) {
     .logo {
         flex-grow: 1;
     }
-}
+
+} */
 
 @media only screen and (min-width: 430px) {
     .navbar {
@@ -553,5 +576,115 @@ input[type=checkbox]:checked + label:after {
         padding: 20px;
     }
 
+    .card-wrapper {
+        display: flex;
+        width: 100%;
+    }
+
+    .card-wrapper span {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    .card-wrapper .svg-wrapper {
+        width: 50px;
+        height: 50px;
+    }
+
+    .card-wrapper .svg-wrapper svg {
+        width: 25px;
+    }
+
+    .card-wrapper .card .content-wrapper {
+        margin: 0 0 0 10px;
+    }
+
+    .split-section {
+        display: flex;
+    }
+
+    .member-split-section {
+        display: block;
+    }
+
+    .message-split-section {
+        display: block;
+    }
+    
+    .pie-chart-container {
+        width: 30vw;
+    }
+
+    .chart-split-section .half:first-of-type {
+        border-bottom: none;
+        padding-bottom: 0px;
+    }
+
+    .member-card {
+        display: flex;
+        text-align: left;
+        margin: 20px;
+    }
+
+    .member-card .member-content {
+        margin-left: 10px;
+    }
+
+    .member-card .member-content .right-side {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .member-card .member-content .right-side.arrow {
+        display: block;
+     }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .card-wrapper span {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .card-wrapper .svg-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card-wrapper .svg-wrapper svg {
+        width: 45px;
+    }
+
+    .card-wrapper .card .content-wrapper {
+        margin: 14px 0 0 20px;
+    }
+
+    .member-split-section {
+        display: flex;
+    }
+
+    .message-split-section {
+        display: flex;
+    }
+
+    .pie-chart-container {
+        width: 25vw;
+    }
+
+    .message-split-section .half:first-of-type {
+        border-bottom: none;
+    }
+
+    .member-split-section .half:first-of-type {
+        border-bottom: none;
+    }
 }
 
